@@ -1,0 +1,34 @@
+.signature-nav li{
+    
+}
+
+.heading{
+    /*-webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;*/
+    cursor: pointer;
+}
+
+.heading a{
+    cursor: pointer
+}
+
+.signature-nav a{
+    cursor: pointer
+}
+
+.summary{
+    display: inline-block;
+    /*width:400px;*/
+    float:right;
+    line-height: 28px;
+    /*text-align: right*/
+    margin-right:5px;
+}
+
+.heading h3{
+    width:100% !important;
+}
+
+

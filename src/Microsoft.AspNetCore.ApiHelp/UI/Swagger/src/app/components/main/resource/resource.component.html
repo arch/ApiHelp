@@ -1,0 +1,10 @@
+<div class="heading">
+    <h2>
+        <a class="toggleEndpointList" (click)="Open()">{{name}}</a>
+    </h2>
+</div>
+<ul class="endpoints" [hidden]="!open0">
+    <li class="endpoint" *ngFor="let item of toArray(point)" >
+        <point [api]="item" [summary]="point[item].Summary"></point>
+    </li>
+</ul>

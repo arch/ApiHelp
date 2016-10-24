@@ -1,0 +1,71 @@
+.flowerMenu{
+    position: fixed;
+    top:80px;
+    font-family: "Droid Sans", sans-serif;
+    width:180px;
+    margin:20px;
+    -moz-box-shadow: 5px 5px 15px #888888;
+    box-shadow: 5px 5px 15px #888888;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+@media only screen and (min-width:1400px) {
+    .flowerMenu{
+        left:50%;
+        margin-left:-700px;
+    }
+}
+
+@media only screen and (max-width:1400px){
+    .flowerMenu{
+        left:0;
+        display:none;
+    }
+}
+
+
+.flowerMenu ul{
+    border:1px solid #ededed;
+    padding-left:15px;
+    
+}
+
+.flowerMenu ul li{
+    margin:5px 0;
+    color:#CCC;
+    cursor: pointer;
+    line-height: 10px;
+}
+.flowerMenu ul li:hover a{
+    font-weight: bold;
+    color:#000;
+}
+
+/*.flowerMenu ul li.active{
+    
+}*/
+.flowerMenu ul li.active a{
+    font-weight: bold;
+    color:#000;
+}
+
+
+.flowerMenu h4{
+    padding:15px;
+    background-color:#547f00;
+    text-align: center;
+    font-weight: bold;
+    color:white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#resources{
+    margin-top:40px;
+}
+
+.flowerMenu h2 a{
+    color:#CCC;
+    text-decoration: none;
+}

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>%(Title)</title>
+    <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="Bookmark" href="favicon.ico" type="image/x-icon" />
+    <link href="jsoneditor.min.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="jsoneditor.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <div id="jsoneditor"  style="height: 100vh;"></div>
+
+    <script>
+        $(function () {
+            // create the editor
+            var container = document.getElementById("jsoneditor");
+            var options = {
+                mode: 'view',
+                modes: ['code', 'tree', 'view'], // allowed modes
+                onError: function (err) {
+                    alert(err.toString());
+                },
+                onModeChange: function (newMode, oldMode) {
+                    console.log('Mode switched from', oldMode, 'to', newMode);
+                }
+            };
+            var editor = new JSONEditor(container, options);
+
+            // load data
+            var url = window.location.origin + "/api/help";
+            $.ajax({
+                url: url,
+                type: 'get',
+                success: function (data) {
+                    editor.set(data);
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        })
+    </script>
+</body>
+</html>

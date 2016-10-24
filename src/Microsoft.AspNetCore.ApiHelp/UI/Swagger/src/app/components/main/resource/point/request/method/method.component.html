@@ -1,0 +1,39 @@
+<thead>
+    <tr>
+        <th data-sw-translate="" style="width: 100px; max-width: 100px">参数名称</th>
+        <th data-sw-translate="" style="width: 310px; max-width: 310px">参数值</th>
+        <th data-sw-translate="" style="width: 60px; max-width: 60px">传参类型</th>
+        <th data-sw-translate="" style="width: 220px; max-width: 230px">参数类型</th>
+    </tr>
+</thead>
+<tbody class="operation-params">
+    <tr *ngFor="let item of jsonHandle(parameters);">
+        <td class="code"><label>{{item.name}}</label></td>
+        <td [ngSwitch]="getDataType(item.value.Scaffold)">
+            <input *ngSwitchWhen="'string'" class=""  minlength="0" name="Id" placeholder=""  type="text" value="" >
+            <div *ngSwitchDefault >
+                <textarea  cols="40" rows="8" spellcheck="false" [value]="formatValue"></textarea>
+                <content-type [type_text]="'Content-Type:'" [type_data]="parameters.SupportedMediaType"></content-type>
+            </div>
+        </td>
+        <td>{{item.value.Source}}</td>
+        <td >
+            <span class="model-signature data-type" [ngSwitch]="getDataType(item.value.Scaffold)">
+                <span *ngSwitchWhen="'object'">
+                    <span [ngClass]="{active: currentTab}" class="tab" (click)="currentTab=true">scaffold</span>
+                    <span [ngClass]="{active: !currentTab}"  class="tab" (click)="currentTab=false">schema</span>
+                    <json-handle [jsonStr]="item.value.Scaffold" *ngIf="currentTab"></json-handle>
+                    <json-handle [jsonStr]="item.value.Schema" *ngIf="!currentTab"></json-handle>
+                </span>
+                <span *ngSwitchWhen="'array'">
+                    <span [ngClass]="{active: currentTab}" class="tab" (click)="currentTab=true">scaffold</span>
+                    <span [ngClass]="{active: !currentTab}"  class="tab" (click)="currentTab=false">schema</span>
+                    <json-handle [jsonStr]="item.value.Scaffold" *ngIf="currentTab"></json-handle>
+                    <json-handle [jsonStr]="item.value.Schema" *ngIf="!currentTab"></json-handle>
+                </span>
+                <span *ngSwitchWhen="'string'">{{item.value.Scaffold}}</span>
+                <span *ngSwitchDefault>null</span>
+            </span>
+        </td>
+    </tr>
+</tbody>

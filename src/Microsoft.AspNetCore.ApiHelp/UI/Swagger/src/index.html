@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=UTF-8>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>%(Title)</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href='css/typography.css' media='screen' rel='stylesheet' type='text/css' />
+  <link href='css/reset.css' media='screen' rel='stylesheet' type='text/css' />
+  <link href='css/screen.css' media='screen' rel='stylesheet' type='text/css' />
+  <link href='css/reset.css' media='print' rel='stylesheet' type='text/css' />
+  <link href='css/print.css' media='print' rel='stylesheet' type='text/css' />
+</head>
+
+<body class="ui-section">
+  <app>
+    Loading...
+  </app>
+
+  <script src="polyfills.bundle.js"></script>
+  <script src="vendor.bundle.js"></script>
+  <script src="main.bundle.js"></script>
+  <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+</body>
+<script>
+$(function(){
+  $(document).on("click",".img_click",function(){
+    var img = $(this).find("img")
+    ExpImgClicked(img);
+  });
+
+  $(document).on("click",".CodeContainer",function(e){
+    var json = this.innerHTML.replace(/<.+?>/gim, '');
+    if(e.target.tagName=="IMG")
+      return false;
+    $(this).parents("tr").find("textarea").val(json);
+  })
+
+});
+
+function ExpImgClicked($img){
+  var img = $img[0];
+  var container = img.parentNode.nextSibling;
+  if(!container) return;
+  var disp = "none";
+  var src = "./images/Collapsed.gif";
+  if(container.style.display == "none"){
+      disp = "inline";
+      src ="./images/Expanded.gif";
+  }
+  container.style.display = disp;
+  img.src = src;
+}
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+﻿{
+  "version": "1.0.0-*",
+  "dependencies": {
+    "dotnet-test-xunit": "2.2.0-*",
+    "xunit": "2.2.0-*",
+    "Microsoft.AspNetCore.ApiHelp.Core": {
+      "target": "project"
+    }
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.*"
+        }
+      }
+    }
+  },
+
+  "buildOptions": {
+    "copyToOutput": {
+      "include": [ "xunit.runner.json" ]
+    },
+    "xmlDoc": true,
+    "nowarn": [ "CS1591" ]
+  },
+
+  "testRunner": "xunit"
+}

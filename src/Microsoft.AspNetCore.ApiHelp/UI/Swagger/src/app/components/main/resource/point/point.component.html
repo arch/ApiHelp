@@ -1,0 +1,58 @@
+<ul class="operations">
+    <li class="{{titleClass}} operation">
+        <div class="heading" (click)="Open()">
+            <h3>
+                <span class="http_method">
+                    <a class="toggleOperation">{{method}}</a>
+                </span>
+                <span class="path">
+                    <a class="toggleOperation ">{{apiName}}</a>
+                </span>
+                <div class="summary">
+                    {{summary}}
+                </div>
+            </h3>
+        </div>
+        <div class="content" [hidden]="!open1">
+            <h4><span>Response Class</span> (<span>Status</span> 200)</h4>
+            <div class="markdown">
+                <p>OK</p>
+            </div>
+            <p>
+                <span class="model-signature">
+                    <div>
+                        <ul class="signature-nav">
+                            <li>
+                                <a class="description-link" 
+                                [ngClass]="{selected:modelSelected}"
+                                (click)="selectTab(0)">Scaffold</a>
+                            </li>
+                            <li>
+                                <a class="snippet-link" 
+                                [ngClass]="{selected:!modelSelected}"
+                                (click)="selectTab(1)" >Schema
+                                </a>
+                            </li>
+                        </ul>
+                        <div>
+                            <div class="signature-container">
+                                <div class="description" *ngIf="modelSelected">
+                                    <json-handle [jsonStr]="Data"></json-handle>
+                                </div>
+                                <div class="snippet" *ngIf="!modelSelected">
+                                    <json-handle [jsonStr]="Schema"></json-handle>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+                <content-type [type_text]="'Content-Type:'" [type_data]="SupportedMediaType"></content-type>
+            </p>
+            <form accept-charset="UTF-8" class="sandbox">
+                <div style="margin:0;padding:0;display:inline"></div>
+                <h4 data-sw-translate="">Request Parameters</h4>
+                <request [method]="enum" [request]="request"></request>
+            </form>
+        </div>
+    </li>
+</ul>

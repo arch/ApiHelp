@@ -1,0 +1,22 @@
+.tab.active{
+    color:black;
+}
+
+.tab{
+    color:#AAA;
+    cursor: pointer;
+    font-size:16px;
+    display:inline-block;
+    margin:5px;
+}
+.data-type{
+    width:400px;
+    display:block;
+}
+
+textarea 
+{ 
+width:100%; 
+height:100%; 
+resize:none;
+} 

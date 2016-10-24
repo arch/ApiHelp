@@ -1,0 +1,36 @@
+﻿{
+  "PageIndex": {
+    "Summary": "",
+    "Type": "Int32",
+    "IsOptional": false
+  },
+  "PageSize": {
+    "Summary": "",
+    "Type": "Int32",
+    "IsOptional": false
+  },
+  "TotalCount": {
+    "Summary": "",
+    "Type": "Int32",
+    "IsOptional": false
+  },
+  "TotalPages": {
+    "Summary": "",
+    "Type": "Int32",
+    "IsOptional": false
+  },
+  "Items": [
+    {
+      "UserName": {
+        "Summary": "",
+        "Type": "String",
+        "IsOptional": false
+      },
+      "Password": {
+        "Summary": "",
+        "Type": "String",
+        "IsOptional": false
+      }
+    }
+  ]
+}

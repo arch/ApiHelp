@@ -1,0 +1,25 @@
+<!--large screen-->
+<div class="ui-wrap screen-wide1">
+    <div id="message-bar" class="ui-wrap message-success" data-sw-translate=""></div>
+    <div class="container" id="resources_container">
+        <ul id="resources">
+            <li id="resource_Account" class="resource" #li [ngClass]="{active: current}"  *ngFor="let item of list">
+                <resource-api [name]="item.name" [point]="item.point" (setCurrent)="li.className = onSetCurrent($event)" ></resource-api>
+            </li> 
+        </ul>
+        <!--<div class="footer">
+            <h4 style="color: #999">[ <span style="font-variant: small-caps">base url</span>: / , <span style="font-variant: small-caps">api version</span>:
+                v1 ]
+                <span style="float:right">
+                    <a href="/">
+                        <img id="validator" src="/">
+                    </a>
+                </span>
+            </h4>
+        </div>-->
+    </div>
+</div>
+<!--large screen-->
+<div  class="ui-wrap screen-wide0">
+    <resource-new [resourceList]="list"></resource-new>
+</div>

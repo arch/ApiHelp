@@ -1,0 +1,58 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "A toolchain for ASP.NET Core to automatically generating API documentation.",
+  "authors": [ "rigofunc", "rigofunc@outlook.com", "lotosbin", "lotosbin@gmail.com" ],
+  "packOptions": {
+    "summary": "A toolchain for ASP.NET Core to automatically generating API documentation.",
+    "owners": [ "rigofunc", "rigofunc@outlook.com", "lotosbin", "lotosbin@gmail.com" ],
+    "projectUrl": "https://github.com/lovedotnet/ApiHelp",
+    "licenseUrl": "https://github.com/lovedotnet/ApiHelp/blob/master/LICENSE",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/lovedotnet/ApiHelp.git"
+    },
+    "tags": [
+      "swagger",
+      "documentation",
+      "discovery",
+      "help",
+      "api-help",
+      "webapi",
+      "aspnet",
+      "aspnetcore"
+    ]
+  },
+  "buildOptions": {
+    "optimize": true,
+    "xmlDoc": true,
+    "warningsAsErrors": true,
+    "nowarn": [
+      "CS1591"
+    ],
+    "embed": {
+      "include": [
+        "UI/JsonEditor/**/*.*",
+        "UI/JsonH/**/*.*",
+        "UI/Swagger/dist/**/*.*"
+      ],
+      "exclude": [
+        "UI/Swagger/dist/**/*.map"
+      ]
+    }
+  },
+  "dependencies": {
+    "Microsoft.AspNetCore.StaticFiles": "1.0.0",
+    "Microsoft.Extensions.FileProviders.Embedded": "1.0.0",
+    "Microsoft.AspNetCore.ApiHelp.Core": {
+      "target": "project"
+    }
+  },
+  "frameworks": {
+    "net46": {
+
+    },
+    "netstandard1.6": {
+
+    }
+  }
+}
