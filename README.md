@@ -51,7 +51,6 @@ A toolchain for ASP.NET Core to automatically generating API documentation.
 
 ## Configure Startup.cs.
 
-
 ```csharp
 public void ConfigureServices(IServiceCollection services) {
     services.AddMvc()
@@ -73,3 +72,8 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
     app.UseMvc();
 }
 ```
+
+# Demo
+
+How to integrate `ApiHelp` to your project, see [Host](src/Host), and open link [api/help/ui](http://localhost:5000/api/help/ui/)
+to view the result.
