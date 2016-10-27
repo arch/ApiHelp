@@ -34,6 +34,11 @@ A toolchain for ASP.NET Core to automatically generating API documentation.
 - [x] JsonOutputFormatter use camel case or not determined by the API (Because it's API).
 - [x] More...
 
+# Running from demo
+
+To integrate `ApiHelp` to your project, download this repo and see [Host](src/Host) source code, running and open link [api/help/ui](http://localhost:5000/api/help/ui/)
+in your browser to view the result.
+
 # Packages
 - [Microsoft.AspNetCore.ApiHelp.Core](https://www.nuget.org/packages/Microsoft.AspNetCore.ApiHelp.Core/1.0.0)
 
@@ -72,8 +77,3 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
     app.UseMvc();
 }
 ```
-
-# Demo
-
-How to integrate `ApiHelp` to your project, see [Host](src/Host), and open link [api/help/ui](http://localhost:5000/api/help/ui/)
-to view the result.
