@@ -42,7 +42,7 @@ namespace Host
             services.AddMvc()
                 .AddApiHelp(options => {
                     options.IgnoreObsoleteApi = true;
-                    options.GenerateStrategy = DocumentGenerateStrategy.Lazy;
+                    options.GenerateStrategy = DocumentGenerateStrategy.Eager;
                     options.IncludeSupportedMediaType = false;
                 });
         }
