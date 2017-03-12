@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <VersionPrefix>1.1.1</VersionPrefix>
+    <Description>A toolchain for ASP.NET Core to automatically generating API documentation.</Description>
+    <Authors>rigofunc;rigofunc@outlook.com;lotosbin;lotosbin@gmail.com</Authors>
+    <TargetFrameworks>net46;netstandard1.6</TargetFrameworks>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>Microsoft.AspNetCore.ApiHelp.Core</AssemblyName>
+    <PackageId>Microsoft.AspNetCore.ApiHelp.Core</PackageId>
+    <PackageTags>swagger;documentation;discovery;help;api-help;webapi;aspnet;aspnetcore</PackageTags>
+    <PackageProjectUrl>https://github.com/arch/ApiHelp</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/arch/ApiHelp/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/arch/ApiHelp.git</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="1.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="1.0.3" />
+    <PackageReference Include="System.Xml.XPath.XDocument" Version="4.0.1" />
+  </ItemGroup>
+</Project>
