@@ -16,7 +16,7 @@
     <RepositoryUrl>https://github.com/arch/ApiHelp.git</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include="UI\JsonEditor\**\*.*;UI\JsonH\**\*.*;UI\Swagger\dist\**\*.*" Exclude="UI\Swagger\dist\**\*.map;bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
+    <EmbeddedResource Include="UI\JsonEditor\**\*.*;UI\JsonH\**\*.*;UI\Swagger\dist\**\*.*" Exclude="UI\Swagger\dist\**\*.map;@(EmbeddedResource)" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Microsoft.AspNetCore.ApiHelp.Core\Microsoft.AspNetCore.ApiHelp.Core.csproj" />

@@ -16,7 +16,7 @@
     <RepositoryUrl>https://github.com/arch/ApiHelp.git</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="1.1.2" />
     <PackageReference Include="System.Xml.XPath.XDocument" Version="4.3.0" />
