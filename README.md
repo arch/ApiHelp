@@ -1,5 +1,7 @@
 # Microsoft.AspNetCore.ApiHelp
 
+[![Join the chat at https://gitter.im/lovedotnet/ApiHelp](https://badges.gitter.im/lovedotnet/ApiHelp.svg)](https://gitter.im/lovedotnet/ApiHelp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A toolchain for ASP.NET Core to automatically generating API documentation.
 
 # Features
